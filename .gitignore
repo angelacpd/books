@@ -1,0 +1,14 @@
+# PyCharm config
+.idea/
+
+# SQLite
+db.sqlite3
+
+# Enviroment Variables
+.env
+
+# Private notes
+notes.md
+
+#
+*__pycache__/
