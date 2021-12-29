@@ -22,6 +22,9 @@ Apply migrations
 > docker-compose exec web python manage.py migrate
 ]: #
 
+Run automated tests
+> docker-compose exec web python manage.py test
+
 Create Django superuser
 > docker-compose exec web python manage.py createsuperuser
 
