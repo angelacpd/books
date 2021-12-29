@@ -8,6 +8,10 @@ https://wsvincent.com/books/
 
 ## Commands to run this project
 
+Build docker image and start container
+> docker-compose up -d --build
+
+[
 Build docker image
 > docker build .
 
@@ -16,6 +20,7 @@ Start container (detached)
 
 Apply migrations
 > docker-compose exec web python manage.py migrate
+]: #
 
 Create Django superuser
 > docker-compose exec web python manage.py createsuperuser
