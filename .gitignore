@@ -4,9 +4,6 @@
 # SQLite
 db.sqlite3
 
-# Enviroment Variables
-.env
-
 # Private notes
 notes.md
 

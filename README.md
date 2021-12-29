@@ -1,41 +1,28 @@
 # Books
-Build a Bookstore with Django web framework, PostgreSQL database and Docker.
+- Build a Bookstore with Django web framework.
+- Add PostgreSQL database
+- Run with Docker.
 
-Based on book **Django for Professionals**:
+Based on Chapter 3 of book **Django for Professionals**:
 https://wsvincent.com/books/
 
-## Dependencies
-
-Start `pipenv` environment
-> pipenv shell
-
-Install packages
-> pipenv install
-
-## Environment variables
-
-Copy .env-example into the .env file
-> cp .env-example .env
-
-Change the environment variables in the .env file accordingly.
-
-### SECRET_KEY
-Generate settings.SECRET_KEY for your project and add it to the .env file.
-
-Open shell
-> python manage.py shell
-
-Get the key by running the following function
-```python
-from django.core.management.utils import get_random_secret_key  
-
-get_random_secret_key()
-```
-
-## Container
+## Commands to run this project
 
 Build docker image
 > docker build .
 
-Start up container (detached)
-> docker-compose up -d --build
+Start container (detached)
+> docker-compose up -d
+
+Apply migrations
+> docker-compose exec web python manage.py migrate
+
+Create Django superuser
+> docker-compose exec web python manage.py createsuperuser
+
+Log in Django admin with the superuser credentials
+
+http://localhost:8000/admin/
+
+Stop container
+> docker-compose down
