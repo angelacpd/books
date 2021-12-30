@@ -9,3 +9,6 @@ notes.md
 
 #
 *__pycache__/
+
+# Static files
+staticfiles/
