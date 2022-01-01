@@ -156,6 +156,7 @@ CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 # django-allauth config
 ACCOUNT_LOGOUT_REDIRECT = 'home'    # override django auth
+ACCOUNT_SESSION_REMEMBER = True
 
 SITE_ID = 1
 
