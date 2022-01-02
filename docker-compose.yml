@@ -4,6 +4,10 @@ services:
   web:
     build: .
     command: sh ./setup.sh
+    environment:
+      # Added a $ before the $ in Django secret key
+      - SECRET_KEY=django-insecure-j3pj!g)%@civ2k%%3f2+di51=+=u0$$8k=ak0*_(jvu*4jx@=ys
+      - DEBUG=1
     volumes:
       - .:/code
     ports:
